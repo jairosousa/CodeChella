@@ -6,7 +6,7 @@ Curso de Spring Boot oferecido pela Alura. Desta vez, nosso foco será em progra
 Jacqueline Oliveira, engenheira de software e instrutora na Alura.
 
 ## Conhecendo o projeto
-Durante o desenvolvimento do projeto, criaremos uma API reativa para o projeto CodeChella, um site de eventos onde haverá vendas de ingressos. Nosso objetivo é que a propagação de mudanças ocorra em tempo real para a clientela a cada venda de ingresso. Assim, a pessoa que está na fila aguardando para comprar seu ingresso saberá em que posição está e se, eventualmente, o ingresso foi esgotado.
+Durante o desenvolvimento do projeto, criaremos uma API reativa para o projeto **CodeChella**, um site de eventos onde haverá vendas de ingressos. Nosso objetivo é que a propagação de mudanças ocorra em tempo real para a clientela a cada venda de ingresso. Assim, a pessoa que está na fila aguardando para comprar seu ingresso saberá em que posição está e se, eventualmente, o ingresso foi esgotado.
 
 A ideia é proporcionar interação em tempo real com requisições assíncronas e não bloqueantes.
 
