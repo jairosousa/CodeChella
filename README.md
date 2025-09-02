@@ -19,3 +19,6 @@ Também consumiremos uma API de tradução de textos de forma não bloqueante pa
 É importante ter noções de Java, Programação Orientada a Objetos e Spring. Além disso, é essencial ter concluído os cursos listados como pré-requisitos, pois é necessário saber como construir uma API REST baseada em servlet, por exemplo.
 
 Faremos comparações entre uma API servlet e nossa API reativa. Portanto, é fundamental se atentar aos pré-requisitos. Se você ainda não os concluiu, é recomendável fazer isso para garantir o melhor aproveitamento possível do curso.
+
+
+## Capítulo 01 - Criando API Reativa
