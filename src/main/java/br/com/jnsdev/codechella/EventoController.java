@@ -2,9 +2,11 @@ package br.com.jnsdev.codechella;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 /**
  * @Autor Jairo Nascimento
@@ -24,4 +26,10 @@ public class EventoController {
     public Flux<EventoDto> obterTodos() {
         return service.obterTodos();
     }
+
+    @GetMapping("/{id}")
+    public Mono<EventoDto> obterPorId(@PathVariable Long id) {
+        return service.obterPorId(id);
+    }
+
 }
