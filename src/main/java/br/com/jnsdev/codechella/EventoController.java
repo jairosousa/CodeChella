@@ -1,10 +1,7 @@
 package br.com.jnsdev.codechella;
 
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -30,6 +27,17 @@ public class EventoController {
     @GetMapping("/{id}")
     public Mono<EventoDto> obterPorId(@PathVariable Long id) {
         return service.obterPorId(id);
+    }
+
+    @PostMapping
+    public Mono<EventoDto> cadastrar(@RequestBody EventoDto dto) {
+        return service.cadastrar(dto);
+    }
+
+    @DeleteMapping("/{id}")
+    public Mono<Void> excluir(@PathVariable Long id) {
+        return service.excluir(id);
+
     }
 
 }

@@ -9,7 +9,7 @@
 	},
 	"item": [
 		{
-			"name": "New Request",
+			"name": "buscar todos",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -22,6 +22,74 @@
 					"port": "8080",
 					"path": [
 						"eventos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/eventos/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventos",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipo\": \"SHOW\",\r\n    \"nome\": \"Madonna\",\r\n    \"data\": \"2025-02-15\",\r\n    \"descricao\": \"Um evento imperdível para todos os amantes da música pop.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/eventos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/eventos/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventos",
+						"15"
 					]
 				}
 			},
