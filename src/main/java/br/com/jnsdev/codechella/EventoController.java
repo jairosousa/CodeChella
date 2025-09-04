@@ -14,14 +14,14 @@ import reactor.core.publisher.Flux;
 @RequestMapping("/eventos")
 public class EventoController {
 
-    private final EventoRepository repositorio;
+    private final EventoService service;
 
-    public EventoController(EventoRepository repositorio) {
-        this.repositorio = repositorio;
+    public EventoController(EventoService service) {
+        this.service = service;
     }
 
     @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE)
-    public Flux<Evento> obterTodos() {
-        return repositorio.findAll();
+    public Flux<EventoDto> obterTodos() {
+        return service.obterTodos();
     }
 }

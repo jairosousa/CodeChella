@@ -1,0 +1,31 @@
+{
+	"info": {
+		"_postman_id": "da8ff093-3d58-47ef-9aeb-4f81fc285b8f",
+		"name": "CodeChella",
+		"description": "Collectio utilizadas no curso Alura de aplicações reativas com WebFlux",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1010130",
+		"_collection_link": "https://dark-robot-19322.postman.co/workspace/Udemy~e6a89feb-60db-48c2-97bf-bb808c38629f/collection/1010130-da8ff093-3d58-47ef-9aeb-4f81fc285b8f?action=share&source=collection_link&creator=1010130"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/eventos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
