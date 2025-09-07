@@ -54,7 +54,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"tipo\": \"SHOW\",\r\n    \"nome\": \"Madonna\",\r\n    \"data\": \"2025-02-15\",\r\n    \"descricao\": \"Um evento imperdível para todos os amantes da música pop.\"\r\n}",
+					"raw": "{\r\n  \"tipo\": \"SHOW\",\r\n  \"nome\": \"Kiss\",\r\n  \"data\": \"2025-05-01\",\r\n  \"descricao\": \"Um evento para pessoas que curtem rock e amam a maior banda de todos os tempos\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
