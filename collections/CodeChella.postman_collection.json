@@ -9,6 +9,14 @@
 	},
 	"item": [
 		{
+			"name": "eventos",
+			"item": []
+		},
+		{
+			"name": "ingressos",
+			"item": []
+		},
+		{
 			"name": "buscar todos",
 			"request": {
 				"method": "GET",
