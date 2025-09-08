@@ -9,6 +9,14 @@
 	},
 	"item": [
 		{
+			"name": "eventos",
+			"item": []
+		},
+		{
+			"name": "ingressos",
+			"item": []
+		},
+		{
 			"name": "buscar todos",
 			"request": {
 				"method": "GET",
@@ -22,6 +30,27 @@
 					"port": "8080",
 					"path": [
 						"eventos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscar por tipo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/eventos/categoria/show",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"eventos",
+						"categoria",
+						"show"
 					]
 				}
 			},
@@ -54,7 +83,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"tipo\": \"SHOW\",\r\n    \"nome\": \"Madonna\",\r\n    \"data\": \"2025-02-15\",\r\n    \"descricao\": \"Um evento imperdível para todos os amantes da música pop.\"\r\n}",
+					"raw": "{\r\n  \"tipo\": \"SHOW\",\r\n  \"nome\": \"Nirvana\",\r\n  \"data\": \"2025-05-02\",\r\n  \"descricao\": \"Um evento para pessoas que curtem rock\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
