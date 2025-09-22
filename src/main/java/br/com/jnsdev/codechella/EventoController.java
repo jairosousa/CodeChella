@@ -1,5 +1,6 @@
 package br.com.jnsdev.codechella;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
@@ -47,6 +48,7 @@ public class EventoController {
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public Mono<EventoDto> cadastrar(@RequestBody EventoDto dto) {
         return service.cadastrar(dto)
                 .doOnSuccess(eventoSink::tryEmitNext);
