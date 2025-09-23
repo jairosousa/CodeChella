@@ -54,7 +54,13 @@ public class EventoController {
                 .doOnSuccess(eventoSink::tryEmitNext);
     }
 
+    @PutMapping("/{id}")
+    public Mono<EventoDto> alterar(@PathVariable Long id, @RequestBody EventoDto dto){
+        return service.alterar(id, dto);
+    }
+
     @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public Mono<Void> excluir(@PathVariable Long id) {
         return service.excluir(id);
 

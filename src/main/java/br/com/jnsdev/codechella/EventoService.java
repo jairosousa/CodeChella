@@ -35,6 +35,19 @@ public class EventoService {
                 .map(EventoDto::toDto);
     }
 
+    public Mono<EventoDto> alterar(Long id, EventoDto dto) {
+        return repositorio.findById(id)
+                .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND, "Id do evento não encontrado.")))
+                .flatMap(eventoExistente -> {
+                    eventoExistente.setTipo(dto.tipo());
+                    eventoExistente.setNome(dto.nome());
+                    eventoExistente.setData(dto.data());
+                    eventoExistente.setDescricao(dto.descricao());
+                    return repositorio.save(eventoExistente);
+                })
+                .map(EventoDto::toDto);
+    }
+
     public Mono<Void> excluir(Long id) {
         return repositorio.findById(id)
                 .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)))

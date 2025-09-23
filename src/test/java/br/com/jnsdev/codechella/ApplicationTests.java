@@ -55,4 +55,33 @@ class ApplicationTests {
                 });
     }
 
+    @Test
+    void alteraEvento() {
+        EventoDto dtoAtualizado = new EventoDto(5L, TipoEvento.CONCERTO, "Metallica",
+                LocalDate.parse("2025-12-01"), "Concerto da banda Metallica");
+
+        webTestClient.put().uri("/eventos/{id}", 5L).bodyValue(dtoAtualizado)
+                .exchange()
+                .expectStatus().isOk()
+                .expectBody(EventoDto.class)
+                .value(response -> {
+                    assertEquals(dtoAtualizado.id(), response.id());
+                    assertEquals(dtoAtualizado.tipo(), response.tipo());
+                    assertEquals(dtoAtualizado.nome(), response.nome());
+                    assertEquals(dtoAtualizado.data(), response.data());
+                    assertEquals(dtoAtualizado.descricao(), response.descricao());
+                });
+    }
+
+    @Test
+    void excluiEvento() {
+        webTestClient.delete().uri("/eventos/{id}", 10L)
+                .exchange()
+                .expectStatus().isNoContent();
+
+        webTestClient.get().uri("/eventos/{id}", 10L)
+                .exchange()
+                .expectStatus().isNotFound();
+    }
+
 }
